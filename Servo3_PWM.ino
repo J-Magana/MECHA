@@ -6,17 +6,17 @@
 
 Servo gripper;  // create servo object to control a servo
 Servo tilter;  // create servo object to control a servo
-Servo lifter;
+Servo lifter;  // create servo object to control a servo
 
 
 // Replace with your network credentials
-const char* ssid = "KennethAP";
+const char* ssid = "MechArmAP";
 const char* password = "12345678";
 
 //int posVal = 0;    // variable to store the servo position
-int gripPin = 21; // Servo motor pin
-int tiltPin = 15; // Servo motor pin
-int liftPin = 5 ;
+int gripPin = 5; // Servo motor pin
+int tiltPin = 19; // Servo motor pin
+int liftPin = 18;
 
 String gripperValue = "0";
 String tilterValue = "0";
