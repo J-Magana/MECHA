@@ -8,7 +8,7 @@
 #define SWITCH_PIN 27
 
 // MAC Address of responder - edit as required
-uint8_t broadcastAddress[] = { 0xE8, 0x31, 0xCD, 0xE6, 0x31, 0x90 };
+uint8_t broadcastAddress[] = { 0x44, 0x17, 0x93, 0xE3, 0x6C, 0xA4 };
 
 // Define a data structure for received data
 typedef struct struct_message_rcv {
@@ -36,8 +36,8 @@ volatile byte motorModeValue = B00000000;
 volatile int mecanumModeValue = 0;
 
 // Variables for Joystick values
-int joyXaxis = 127;
-int joyYaxis = 127;
+int joyXaxis = 1880;
+int joyYaxis = 1900;
 
 // Variable for Joystick pushbutton state
 bool joySwitchState = HIGH;
@@ -110,8 +110,8 @@ void loop() {
   
   else {
     // Send "zero" values as joystick data
-    joyXaxis = 127;
-    joyYaxis = 127;
+    joyXaxis = 1880;
+    joyYaxis = 1900;
   }
 
   // Check and set switch status
