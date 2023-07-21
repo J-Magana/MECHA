@@ -1,8 +1,3 @@
-// Callback function called when data is sent
-void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
-  
-}
-
 // Callback function executed when data is received
 void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
 
@@ -11,8 +6,8 @@ void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
     stopMotors();
 
     // Set controller values to default
-    joyXaxis = 127;
-    joyYaxis = 127;
+    joyXaxis = 1880;
+    joyYaxis = 1900;
     joySwitchState = true;
     return;
   }

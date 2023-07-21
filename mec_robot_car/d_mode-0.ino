@@ -9,42 +9,42 @@ void motorControlMode0(int xjoystick, int yjoystick) {
   int yaxis = yjoystick;
 
   // Determine Wheel Mode byte
-  if ((xaxis == 0) && (yaxis > 0)) {
+  if (((xaxis >= 1870) && (xaxis <= 1890)) && (yaxis > 1920)) {
     //Straight Forward
     motorCtlMode = MEC_STRAIGHT_FORWARD;
   } 
   
-  else if ((xaxis == 0) && (yaxis < 0)) {
+  else if (((xaxis >= 1870) && (xaxis <= 1890)) && (yaxis < 1880)) {
     //Straight Backward
     motorCtlMode = MEC_STRAIGHT_BACKWARD;
   } 
   
-  else if ((xaxis > 0) && (yaxis == 0)) {
+  else if ((xaxis > 1890) && ((yaxis >= 1880) && (yaxis <= 1920))) {
     //Sideways Right
     motorCtlMode = MEC_SIDEWAYS_RIGHT;
   } 
   
-  else if ((xaxis < 0) && (yaxis == 0)) {
+  else if ((xaxis < 1870) && ((yaxis >= 1880) && (yaxis <= 1920))) {
     //Sideways Left
     motorCtlMode = MEC_SIDEWAYS_LEFT;
   } 
   
-  else if ((xaxis > 0) && (yaxis > 0)) {
+  else if ((xaxis > 1890) && (yaxis > 1920)) {
     //Diagonal 45 Degrees
     motorCtlMode = MEC_DIAGONAL_45;
   } 
   
-  else if ((xaxis < 0) && (yaxis > 0)) {
+  else if ((xaxis < 1870) && (yaxis > 1920)) {
     //Diagonal 135 Degrees
     motorCtlMode = MEC_DIAGONAL_135;
   } 
   
-  else if ((xaxis < 0) && (yaxis < 0)) {
+  else if ((xaxis < 1870) && (yaxis < 1880)) {
     //Diagonal 225 Degrees
     motorCtlMode = MEC_DIAGONAL_225;
   } 
   
-  else if ((xaxis > 0) && (yaxis < 0)) {
+  else if ((xaxis > 1890) && (yaxis < 1880)) {
     //Diagonal 315 Degrees
     motorCtlMode = MEC_DIAGONAL_315;
   }

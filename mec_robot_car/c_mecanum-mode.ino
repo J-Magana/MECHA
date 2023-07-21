@@ -2,7 +2,7 @@ void toggleMecanumMode() {
   // Toggle Mecanum Mode value from 0 to 5
   int currentMecMode = mecanumModeValue;
   
-  if (currentMecMode == 5) {
+  if (currentMecMode == 1) {
     mecanumModeValue = 0;
   }
   
@@ -27,34 +27,6 @@ void driveMecanumMode() {
       // Rotate mode, controlled by joystick Y Axis only
       // Pass joystick values to motorControlMode0 function
       motorControlMode1(joyYaxis);
-
-      break;
-
-    case 2:
-      // Pivot Right mode, controlled by joystick Y Axis only
-      // Pass joystick values to motorControlMode0 function
-      motorControlMode2(joyYaxis);
-
-      break;
-
-    case 3:
-      // Pivot Left mode, controlled by joystick Y Axis only
-      // Pass joystick values to motorControlMode0 function
-      motorControlMode3(joyYaxis);
-
-      break;
-
-    case 4:
-      // Pivot Front mode, controlled by joystick Y Axis only
-      // Pass joystick values to motorControlMode0 function
-      motorControlMode4(joyYaxis);
-
-      break;
-
-    case 5:
-      // Pivot Rear mode, controlled by joystick Y Axis only
-      // Pass joystick values to motorControlMode0 function
-      motorControlMode5(joyYaxis);
 
       break;
   }
