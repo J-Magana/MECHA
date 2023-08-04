@@ -20,6 +20,7 @@ void driveMecanumMode() {
       // Standard driving mode, controlled by joystick
       // Pass joystick values to motorControlMode0 function
       motorControlMode0(joyXaxis, joyYaxis);
+      Serial.println("case 1");
 
       break;
 
@@ -27,6 +28,7 @@ void driveMecanumMode() {
       // Rotate mode, controlled by joystick Y Axis only
       // Pass joystick values to motorControlMode0 function
       motorControlMode1(joyYaxis);
+      Serial.println("case 2");
 
       break;
   }

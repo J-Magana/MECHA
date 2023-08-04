@@ -8,12 +8,12 @@ void motorControlMode1(int yjoystick) {
   int yaxis = yjoystick;
 
   // Determine if forward or reverse
-  if (yaxis > 1920) {
+  if (yaxis > 2000) {
     // Forward
     motorCtlMode = MEC_ROTATE_CLOCKWISE;
   } 
   
-  else if (yaxis < 1880) {
+  else if (yaxis < 1800) {
     // Reverse
     motorCtlMode = MEC_ROTATE_COUNTERCLOCKWISE;
   } 

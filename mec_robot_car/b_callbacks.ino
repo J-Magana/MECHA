@@ -19,6 +19,10 @@ void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len) {
   joyYaxis = rcvData.yAxis;
   joySwitchState = rcvData.pbSwitch;
 
+  Serial.println(joyXaxis);
+  Serial.println(joyYaxis);
+  Serial.println(joySwitchState);
+
   // Check to see if we are changing Mecanum mode
   if (joySwitchState == true) {
     // Switch was pressed, toggle mecanum mode

@@ -8,20 +8,20 @@
 
 // Define Motor Connections
 // Right Front Motor
-#define MF_AI1 32
-#define MF_AI2 23
+#define MF_AI1 19
+#define MF_AI2 21
 
 // Left Front Motor
-#define MF_BI1 33
-#define MF_BI2 25
+#define MF_BI1 18
+#define MF_BI2 4
 
 // Right Rear Motor
-#define MR_AI1 12
-#define MR_AI2 14
+#define MR_AI1 25
+#define MR_AI2 12
 
 // Left Rear Motor
-#define MR_BI1 13
-#define MR_BI2 2
+#define MR_BI1 33
+#define MR_BI2 32
 
 // Define a data structure for received data
 typedef struct struct_message_rcv {
