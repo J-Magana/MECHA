@@ -8,13 +8,7 @@
 #define SWITCH_PIN 27
 
 // MAC Address of responder - edit as required
-uint8_t broadcastAddress[] = { 0x44, 0x17, 0x93, 0xE3, 0x6C, 0xA4 };
-
-// Define a data structure for received data
-typedef struct struct_message_rcv {
-  bool motorMode;
-  int mecanumMode;
-} struct_message_rcv;
+uint8_t broadcastAddress[] = { 0x70, 0xB8, 0xF6, 0x99, 0x69, 0x70 };
 
 // Create a structured object for sent data
 typedef struct struct_message_xmit {
@@ -85,12 +79,14 @@ void setup() {
   if (esp_now_add_peer(&peerInfo) != ESP_OK) {
     connectStatus = "No peer added";
     connectError = HIGH;
+    Serial.println("Failed to add peer");
     return;
   } 
   
   else {
     connectStatus = "ESP-NOW Ready";
     connectError = LOW;
+    Serial.println("add peer");
   }
 
   // Enter the Loop with connectError set HIGH to avoid intial display flicker
