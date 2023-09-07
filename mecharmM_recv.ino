@@ -4,7 +4,6 @@
 #include <ESPAsyncWebServer.h>
 #include <ESP32Servo.h>
 #include <esp_now.h>
-#include <WiFi.h>
 
 
 Servo gripper;  // create servo object to control a servo
